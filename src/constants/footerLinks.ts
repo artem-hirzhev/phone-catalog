@@ -1,7 +1,7 @@
 export const footerLinks = [
   {
     id: 1,
-    path: 'https://github.com/artem-hirzhev/react_phone-catalog',
+    path: 'https://github.com/artem-hirzhev/phone-catalog',
     text: 'GITHUB',
   },
   {
@@ -11,7 +11,7 @@ export const footerLinks = [
   },
   {
     id: 3,
-    path: 'https://github.com/artem-hirzhev/react_phone-catalog/blob/master/LICENSE',
+    path: 'https://github.com/artem-hirzhev/phone-catalog/blob/master/LICENSE',
     text: 'RIGHTS',
   },
 ];
