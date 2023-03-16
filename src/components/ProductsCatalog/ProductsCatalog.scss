@@ -1,0 +1,66 @@
+.products {
+  width: 1136px;
+
+  @include onMobile {
+    width: 375px;
+  }
+
+  @include onTablet {
+    width: 768px;
+  }
+
+  margin: 0 auto;
+  height: 100%;
+  padding-bottom: 176px;
+
+  &__amount {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-secondary;
+  }
+
+  &__filters {
+    display: flex;
+
+    @include onMobile {
+      flex-direction: column;
+    }
+
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-secondary;
+    margin-bottom: 24px;
+  }
+
+  &__filter-type {
+    margin-bottom: 4px;
+  }
+
+  &__sort {
+    margin-right: 16px;
+
+    @include onMobile {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    gap: 40px 16px;
+
+    @include onTablet {
+      gap: 20px 4px;
+    }
+
+    @include onMobile {
+      width: min-content;
+      margin: 0 auto 40px auto;
+    }
+
+  }
+}

@@ -1,0 +1,16 @@
+.button-favorite {
+  height: 40px;
+  width: 40px;
+
+  background-color: white;
+  border: 1px solid $color-icons;
+
+  &--selected {
+    border: 1px solid $color-elements;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $color-primary;
+  }
+}

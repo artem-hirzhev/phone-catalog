@@ -1,0 +1,57 @@
+.home {
+  width: 1136px;
+
+  @include onTablet {
+    width: 768px;
+  }
+
+  @include onMobile {
+    width: 375px;
+  }
+
+  margin: 0 auto;
+  padding-bottom: 176px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    color: $color-primary;
+
+    margin-bottom: 32px;
+  }
+
+  &__categories {
+    margin-bottom: 80px;
+
+    @include onMobile {
+      width: min-content;
+      margin: 0 auto;
+    }
+  }
+
+  &__hot,
+  &__banner {
+    margin-bottom: 80px;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__new {
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__category-cards {
+    display: flex;
+    gap: 16px;
+
+    @include onMobile {
+      flex-direction: column;
+    }
+  }
+}

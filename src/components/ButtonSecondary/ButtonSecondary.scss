@@ -1,0 +1,28 @@
+.button-secondary {
+  background-color: white;
+  border: 1px solid $color-icons;
+
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--disabled {
+    border: 1px solid $color-elements;
+  }
+
+  &--active {
+    color: white;
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border-color: $color-primary;
+  }
+}

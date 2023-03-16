@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+
+  &__prev {
+    margin-right: 16px;
+  }
+
+  &__pages {
+    display: flex;
+    gap: 8px;
+    margin-right: 16px;
+  }
+}

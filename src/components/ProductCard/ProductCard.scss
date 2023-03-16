@@ -1,0 +1,121 @@
+.product {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+
+  height: 502px;
+  width: 272px;
+  padding: 32px 24px 0;
+
+  @include onTablet {
+    height: 482px;
+    width: 252px;
+    padding: 12px 10px 0;
+  }
+
+  @include onMobile {
+    height: 502px;
+    width: 272px;
+    padding: 32px 24px 0;
+  }
+
+  border: 1px solid $color-elements;
+
+  &__image {
+    text-decoration: none;
+    margin: 0 auto 24px;
+
+    & :first-child {
+      height: 208px;
+    }
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: left;
+    text-decoration: none;
+    color: $color-primary;
+    height: 42px;
+    margin-bottom: 8px;
+  }
+
+  &__price {
+    display: inherit;
+    justify-content: start;
+    width: 100%;
+    position: relative;
+    padding-bottom: 8px;
+    margin: 0 0 16px;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: $color-elements;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__discount {
+    font-size: 22px;
+    line-height: 28px;
+    color: $color-primary;
+  }
+
+  &__full {
+    @extend .product__discount;
+
+    text-decoration-line: line-through;
+    color: $color-secondary;
+    margin-left: 8px;
+  }
+
+  &__specs {
+    width: 100%;
+    display: inherit;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    &:nth-last-child(2) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__spec-name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-secondary;
+  }
+
+  &__spec-value {
+    @extend .product__spec-name;
+
+    color: $color-primary;
+  }
+
+  &__buttons {
+    display: inherit;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__favorite {
+    height: 40px;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-position: center;
+    border: 1px solid $color-elements;
+
+    &:hover {
+      cursor: pointer;
+      border-color: $color-primary;
+    }
+  }
+}

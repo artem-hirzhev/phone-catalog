@@ -1,0 +1,405 @@
+.details {
+  width: 1136px;
+
+  @include onTablet {
+    width: 750px;
+  }
+
+  @include onMobile {
+    width: 355px;
+  }
+
+  margin: 0 auto;
+  padding-bottom: 96px;
+
+  &__product-name {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    color: $color-primary;
+
+    margin-bottom: 40px;
+  }
+
+  &__back {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-secondary;
+    text-decoration: none;
+
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+
+    & :first-child {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(465px, 1fr);
+
+    gap: 80px 64px;
+
+    margin-bottom: 80px;
+
+
+    @include onTablet {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(465px, 1fr);
+
+      gap: 80px 64px;
+
+      margin-bottom: 80px;
+    }
+
+    @include onMobile {
+      grid-template-columns: repeat(1fr);
+      grid-template-rows: repeat(4, min-content);
+
+      gap: 30px 0;
+    }
+  }
+
+  &__images {
+    display: flex;
+    justify-content: center;
+
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+
+
+    @include onTablet {
+      grid-column: 1 / 1;
+      grid-row: 1 / 1;
+    }
+
+    @include onMobile {
+      grid-column: 1;
+      grid-row: 1 / 1;
+    }
+  }
+
+  &__info {
+    grid-column: 2 / 2;
+    grid-row: 1 / 1;
+
+
+    @include onTablet {
+      grid-column: 2 / 2;
+      grid-row: 1 / 1;
+    }
+
+    @include onMobile {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+    }
+  }
+
+  &__about {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+
+
+    @include onTablet {
+      grid-column: 1 / 1;
+      grid-row: 2 / 2;
+    }
+
+    @include onMobile {
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+    }
+  }
+
+  &__full-specs {
+    grid-column: 2 / 2;
+    grid-row: 2 / 2;
+
+
+    @include onTablet {
+      grid-column: 2 / 2;
+      grid-row: 2 / 2;
+    }
+
+    @include onMobile {
+      grid-column: 1 / 1;
+      grid-row: 4 / 4;
+    }
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__small-images-container {
+    margin-right: 16px;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+
+  &__image-big {
+    height: 464px;
+
+    @include onDesktop {
+      width: 464px;
+    }
+
+    @include onMobile {
+      width: 330px;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & :first-child {
+      height: 442px;
+    }
+  }
+
+  &__image-small {
+    width: 80px;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    border: 1px solid #c4c4c4;
+    background-color: white;
+
+    margin-bottom: 16px;
+    
+
+    &:hover {
+      border-color: $color-primary;
+      cursor: pointer;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & :first-child {
+      height: 66px;
+    }
+  }
+
+  &__colors {
+    margin-bottom: 24px;
+
+    & :first-child {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__info-name {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-secondary;
+
+    margin-bottom: 8px;
+  }
+
+  &__info-container {
+    display: flex;
+    position: relative;
+
+    padding-bottom: 25px;
+
+    &:after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $color-elements;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__color {
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid white;
+    outline: 1px solid $color-elements;
+
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      outline-color: $color-secondary;
+    }
+
+    &--active {
+      outline-color: $color-primary;
+    }
+  }
+
+  &__capacity {
+    margin-bottom: 32px;
+  }
+
+  &__memory-size {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 56px;
+    height: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    text-align: center;
+    text-decoration: none;
+    color: $color-primary;
+
+    border: 1px solid $color-secondary;
+
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      color: white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
+
+    &:hover {
+      border-color: $color-primary;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: baseline;
+  }
+
+  &__discount {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    color: $color-primary;
+
+    margin-right: 8px;
+  }
+
+  &__regular {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 28px;
+    text-decoration-line: line-through;
+    color: $color-secondary;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 8px;
+
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+    color: $color-primary;
+    height: 48px;
+
+    position: relative;
+
+    margin-bottom: 32px;
+
+    &:after {
+      content: "";
+      height: 1px;
+      width: 100%;
+      background-color: $color-elements;
+
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+    color: $color-primary;
+
+    margin-bottom: 16px;
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-secondary;
+
+    margin-bottom: 32px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__short-specs {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  &__specs-group {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    & :first-child {
+      color: $color-secondary;
+    }
+
+    & :last-child {
+      color: $color-primary;
+      text-align: end;
+    }
+  }
+
+  &__additional {
+    margin-bottom: 80px;
+
+    @include onMobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  
+  &__home,
+  &__arrow {
+    height: 16px;
+    width: 16px;
+    margin-right: 13px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  }
+
+  &__category {
+    margin-right: 13px;
+    text-decoration: none;
+    color: $color-primary;
+
+    @extend .breadcrumbs__item;
+  }
+
+  &__text {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: $color-secondary;
+
+    &--active {
+      color: $color-primary;
+    }
+  }
+}

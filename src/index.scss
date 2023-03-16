@@ -1,0 +1,51 @@
+@import "./styles/utils/mixins";
+@import "./styles/utils/reset";
+@import "./styles/utils/vars";
+
+@import "./components/Header/Header.scss";
+@import "./components/Footer/Footer.scss";
+@import "./components/Logo/Logo.scss";
+@import "./components/NavList/NavList.scss";
+@import "./components/ProductCard/ProductCard.scss";
+@import "./components/ProductsSlider/ProductsSlider.scss";
+@import "./components/BannerSlider/BannerSlider.scss";
+@import "./components/ProductsCatalog/ProductsCatalog.scss";
+@import "./components/ButtonSecondary/ButtonSecondary.scss";
+@import "./components/ButtonFavorite/ButtonFavorite.scss";
+@import "./components/ButtonPrimary/ButtonPrimary.scss";
+@import "./components/CategoryCard/CategoryCard.scss";
+@import "./components/Pagination/Pagination.scss";
+@import "./components/Dropdown/Dropdown.scss";
+@import "./components/Breadcrumbs/Breadcrumbs.scss";
+@import "./components/Search/Search.scss";
+@import "./components/Loader/Loader.scss";
+@import "./components/LoadError/LoadError.scss";
+@import "./components/NoResults/NoResults.scss";
+@import "./components/NoSearchResults/NoSearchResults.scss";
+
+@import "./pages/HomePage/HomePage.scss";
+@import "./pages/ProductDetailsPage/ProductDetailsPage.scss";
+@import "./pages/CartPage/CartPage.scss";
+@import "./pages/FavoritesPage/FavoritesPage.scss";
+@import "./pages/NotFoundPage/NotFoundPage.scss";
+
+@font-face {
+  font-family: "Mont";
+  src: url("./assets/fonts/Mont-Regular.otf");
+  src: url("./assets/fonts/Mont-SemiBold.otf");
+  src: url("./assets/fonts/Mont-Bold.otf");
+}
+
+// iframe {
+//   display: none;
+// }
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  font-family: "Mont", sans-serif;
+  position: relative;
+  min-height: 100vh;
+}

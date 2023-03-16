@@ -1,0 +1,30 @@
+.category {
+  width: 368px;
+
+  @include onTablet {
+    width: 242px;
+  }
+
+  &__img {
+    width: 100%;
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    &:nth-child(2) {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 26px;
+      text-decoration: none;
+      color: $color-primary;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__quantity {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+    color: $color-secondary;
+  }
+}

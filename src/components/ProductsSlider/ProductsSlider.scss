@@ -1,0 +1,53 @@
+.slider {
+  width: 1136px;
+
+  @include onTablet {
+    width: 768px;
+  }
+
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: -0.01em;
+    color: $color-primary;
+
+    margin-bottom: 32px;
+  }
+
+  &__buttons {
+    display: inherit;
+    justify-content: space-between;
+    width: 80px;
+  }
+
+  &__container {
+    display: flex;
+    transition-duration: 400ms;
+  }
+
+  &__item {
+    @include onDesktop {
+      margin-right: 16px;
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    @include onTablet {
+      margin-right: 6px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

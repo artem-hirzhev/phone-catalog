@@ -1,0 +1,72 @@
+.banner {
+  &__slider {
+    display: flex;
+    height: 400px;
+    width: 100%;
+
+    @include onTablet {
+      height: 266px;
+      width: 768px;
+    }
+
+    justify-content: space-between;
+    margin-bottom: 18px;
+  }
+
+  &__container {
+    width: 1040px;
+    overflow: hidden;
+
+    @include onTablet {
+      width: 700px;
+    }
+  }
+
+  &__links {
+    display: flex;
+    width: 100%;
+    transition-duration: 400ms;
+  }
+
+  &__link {
+    width: 1040px;
+    height: 400px;
+    flex-shrink: 0;
+
+    @include onTablet {
+      width: 700px;
+      height: 266px;
+    }
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__indicators {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__indicator {
+    height: 4px;
+    width: 14px;
+  
+    background-color: $color-elements;
+    border: none;
+
+    margin-right: 42px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--active {
+      background-color: $color-primary;
+    }
+  }
+}
