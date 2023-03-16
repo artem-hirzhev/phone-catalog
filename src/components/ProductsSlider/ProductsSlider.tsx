@@ -59,7 +59,6 @@ export const ProductsSlider: React.FC<Props> = ({ products, title }) => {
 
       <div
         className="slider__container"
-        data-cy="cardsContainer"
         style={{ transform: `translate(${offset}%)` }}
       >
         {products.map(product => (

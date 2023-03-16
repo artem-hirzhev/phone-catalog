@@ -55,7 +55,6 @@ export const Search = () => {
         )}
         disabled={!query}
         onClick={clearSearch}
-        data-cy="searchDelete"
       >
         {query ? (
           <CrossIcon />

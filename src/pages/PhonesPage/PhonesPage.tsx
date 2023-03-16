@@ -25,7 +25,7 @@ export const PhonesPage: React.FC = () => {
   }, []);
 
   return (
-    <main className="phones" data-cy="productList">
+    <main className="phones">
       {isLoading && <Loader />}
 
       {(!isLoading && !error && phones.length > 0) && (

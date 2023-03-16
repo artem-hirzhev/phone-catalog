@@ -50,11 +50,7 @@ export const ProductDetailsPage: React.FC = () => {
         <>
           <Breadcrumbs productName={details.name} />
 
-          <Link
-            className="details__back"
-            to="/phones"
-            data-cy="backButton"
-          >
+          <Link className="details__back" to="/phones">
             <ArrowLeft />
             Back
           </Link>
@@ -178,7 +174,7 @@ export const ProductDetailsPage: React.FC = () => {
               </div>
             </article>
 
-            <article className="details__about" data-cy="productDescription">
+            <article className="details__about">
               <h2 className="details__title">About</h2>
 
               {details.description.map(item => (

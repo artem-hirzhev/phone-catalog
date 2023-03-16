@@ -74,11 +74,10 @@ export const Pagination: React.FC<Props> = (
   };
 
   return (
-    <div className="pagination" data-cy="pagination">
+    <div className="pagination">
       <div className="pagination__prev">
         <ButtonSecondary
           handler={() => handleArrows(prevPage)}
-          data-cy="paginationLeft"
           disabled={firstPage}
           width="32px"
           height="32px"
@@ -127,7 +126,6 @@ export const Pagination: React.FC<Props> = (
       <div className="pagination__next">
         <ButtonSecondary
           handler={() => handleArrows(nextPage)}
-          data-cy="paginationRight"
           disabled={lastPage}
           width="32px"
           height="32px"

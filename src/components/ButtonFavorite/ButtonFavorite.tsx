@@ -41,7 +41,6 @@ export const ButtonFavorite: React.FC<Props> = ({ product }) => {
       )}
       type="button"
       onClick={manageFavorites}
-      data-cy="addToFavorite"
     >
       {isFavorite ? (
         <FavoriteIconRed />

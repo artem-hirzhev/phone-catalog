@@ -12,7 +12,7 @@ export const Breadcrumbs: React.FC<Props> = ({ productName }) => {
   const categoryCatalog = pathname.split('/')[1];
 
   return (
-    <div className="breadcrumbs" data-cy="breadCrumbs">
+    <div className="breadcrumbs">
       <Link to="/" className="breadcrumbs__home">
         <HomeIcon />
       </Link>

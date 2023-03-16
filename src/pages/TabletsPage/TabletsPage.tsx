@@ -25,7 +25,7 @@ export const TabletsPage: React.FC = () => {
   }, []);
 
   return (
-    <main className="tablets" data-cy="productList">
+    <main className="tablets">
       {isLoading && <Loader />}
 
       {(!isLoading && !error && tablets.length > 0) && (

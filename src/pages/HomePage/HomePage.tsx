@@ -43,10 +43,7 @@ export const HomePage: React.FC = () => {
           <section className="home__categories">
             <h2 className="home__title">Shop by categories</h2>
 
-            <div
-              className="home__category-cards"
-              data-cy="categoryLinksContainer"
-            >
+            <div className="home__category-cards">
               {categories.map(category => (
                 <CategoryCard
                   key={category.id}

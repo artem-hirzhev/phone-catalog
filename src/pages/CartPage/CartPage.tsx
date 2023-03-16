@@ -81,7 +81,6 @@ export const CartPage = () => {
                   <div className="cart__item" key={cartItem.id}>
                     <button
                       type="button"
-                      data-cy="cartDeleteButton"
                       className="cart__delete"
                       onClick={() => deleteItem(cartItem.id)}
                     >
@@ -135,10 +134,7 @@ export const CartPage = () => {
             <div className="cart__checkout">
               <div className="cart__total-price">{`$${totalPrice}`}</div>
 
-              <div
-                className="cart__total-quantity"
-                data-cy="productQauntity"
-              >
+              <div className="cart__total-quantity">
                 {`Total for ${totalAmount} items`}
               </div>
 

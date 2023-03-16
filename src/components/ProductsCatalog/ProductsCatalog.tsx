@@ -74,7 +74,7 @@ export const ProductsCatalog: React.FC<Props> = ({ products, title }) => {
         <>
           <p className="products__amount">{`${searchResults.length} results`}</p>
 
-          <div className="products__cards" data-cy="productList">
+          <div className="products__cards">
             {searchResults.map(result => (
               <ProductCard key={result.id} product={result} />
             ))}
@@ -120,7 +120,7 @@ export const ProductsCatalog: React.FC<Props> = ({ products, title }) => {
             </div>
           )}
 
-          <div className="products__cards" data-cy="cardsContainer">
+          <div className="products__cards">
             {perPage === 'all' ? (
               sortProducts(products, sort).map(phone => (
                 <ProductCard key={phone.id} product={phone} />
