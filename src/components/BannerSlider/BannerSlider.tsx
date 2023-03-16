@@ -61,7 +61,7 @@ export const BannerSlider: React.FC<Props> = ({ banners }) => {
     setOffset(prev => prev + 100);
   };
 
-  let timeoutId: NodeJS.Timeout;
+  let timeoutId: number | undefined;
 
   useEffect(() => {
     timeoutId = setTimeout(pressNext, 2000);
@@ -89,10 +89,6 @@ export const BannerSlider: React.FC<Props> = ({ banners }) => {
                 key={banner.id}
                 style={{ backgroundImage: `url(${banner.img})` }}
               >
-                {/* <div
-                  className="banner__img"
-                  style={{ backgroundImage: `url(${banner.img})` }}
-                /> */}
               </Link>
             ))}
           </div>
