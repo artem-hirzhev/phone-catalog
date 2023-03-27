@@ -1,6 +1,6 @@
 import { Product } from '../types';
 
-const BASE_URL = 'https://raw.githubusercontent.com/artem-hirzhev/react_phone-catalog/gh-pages/api';
+const BASE_URL = 'https://raw.githubusercontent.com/artem-hirzhev/phone-catalog/gh-pages/api';
 
 export const getProducts = () => {
   return fetch(`${BASE_URL}/products.json`)
