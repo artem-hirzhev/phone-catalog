@@ -65,8 +65,7 @@ export const ProductsCatalog: React.FC<Props> = ({ products, title }) => {
   );
 
   const { pathname } = useLocation();
-  const filtersIsVisible
-    = ['/phones', '/tablets', '/accessories'].includes(pathname);
+  const filtersIsVisible = pathname !== '/favorites';
 
   return (
     <div className="products">
