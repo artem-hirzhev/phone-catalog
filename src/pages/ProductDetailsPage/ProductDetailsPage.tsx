@@ -24,7 +24,6 @@ export const ProductDetailsPage: React.FC = () => {
   const { pathname } = useLocation();
   const category = pathname.split('/')[1];
   const product = products.find(item => item.itemId === details?.id);
-  const dataIsLoaded = !error && details && products.length > 0;
 
   useEffect(() => {
     setIsLoading(true);
@@ -46,7 +45,7 @@ export const ProductDetailsPage: React.FC = () => {
     <main className="details">
       {isLoading && <Loader />}
 
-      {(!isLoading && dataIsLoaded) && (
+      {(!isLoading && details) && (
         <>
           <Breadcrumbs productName={details.name} />
 
@@ -135,12 +134,9 @@ export const ProductDetailsPage: React.FC = () => {
               <div className="details__buttons">
                 {product ? (
                   <>
-                    <ButtonPrimary
-                      product={product}
-                    />
-                    <ButtonFavorite
-                      product={product}
-                    />
+                    <ButtonPrimary product={product} />
+
+                    <ButtonFavorite product={product} />
                   </>
                 ) : (
                   <h3>{'Product isn\'t available'}</h3>
@@ -244,9 +240,11 @@ export const ProductDetailsPage: React.FC = () => {
             </article>
           </section>
 
-          <section className="details__additional">
-            <ProductsSlider products={products} title="You may also like" />
-          </section>
+          {products.length > 0 && (
+            <section className="details__additional">
+              <ProductsSlider products={products} title="You may also like" />
+            </section>
+          )}
         </>
       )}
 
