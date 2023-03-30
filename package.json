@@ -19,12 +19,19 @@
     "vite-plugin-svgr": "^2.4.0"
   },
   "devDependencies": {
+    "@mate-academy/eslint-config-react-typescript": "*",
+    "@mate-academy/stylelint-config": "*",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
     "@vitejs/plugin-react": "^3.1.0",
+    "eslint": "^8.37.0",
     "gh-pages": "^5.0.0",
     "sass": "^1.59.3",
+    "stylelint": "^13.13.1",
     "typescript": "^4.9.3",
-    "vite": "^4.1.0"
+    "vite": "^4.1.0",
+    "vite-plugin-eslint": "^1.8.1",
+    "vite-plugin-stylelint": "^4.3.0"
   }
 }

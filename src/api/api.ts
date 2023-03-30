@@ -1,5 +1,6 @@
 import { Product } from '../types';
 
+// eslint-disable-next-line max-len
 const BASE_URL = 'https://raw.githubusercontent.com/artem-hirzhev/phone-catalog/gh-pages/api';
 
 export const getProducts = () => {

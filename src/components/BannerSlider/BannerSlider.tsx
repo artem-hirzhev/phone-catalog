@@ -88,8 +88,7 @@ export const BannerSlider: React.FC<Props> = ({ banners }) => {
                 to={banner.path}
                 key={banner.id}
                 style={{ backgroundImage: `url(${banner.img})` }}
-              >
-              </Link>
+              />
             ))}
           </div>
         </div>

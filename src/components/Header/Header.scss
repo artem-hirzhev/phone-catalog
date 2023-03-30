@@ -26,7 +26,8 @@
     }
   }
 
-  &__left, &__right {
+  &__left,
+  &__right {
     display: flex;
     align-items: center;
   }

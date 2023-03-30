@@ -1,0 +1,6 @@
+{
+  "extends": "@mate-academy/stylelint-config",
+  "rules": {
+    "length-zero-no-unit": null
+  }
+}
