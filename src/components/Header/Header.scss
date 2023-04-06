@@ -54,6 +54,14 @@
     display: flex;
     justify-content: center;
     border-bottom: 1px solid $color-elements;
+
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s linear;
+
+    &--open {
+      height: 64px;
+    }
   }
 
   &__icon {

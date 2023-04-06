@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import classNames from 'classnames';
 import { DropdownItem } from '../../types';
 import { ReactComponent as ArrowUp } from '../../assets/svg/arrowUp.svg';
 import { ReactComponent as ArrowDown } from '../../assets/svg/arrowDown.svg';
@@ -44,21 +45,25 @@ export const Dropdown: React.FC<Props> = (
         )}
       </button>
 
-      {open && (
-        <div className="dropdown__menu">
-          {items.map(item => (
-            <button
-              key={item.id}
-              type="button"
-              className="dropdown__item"
-              value={item.value}
-              onClick={() => handleChange(item.value, item.name)}
-            >
-              {item.name}
-            </button>
-          ))}
-        </div>
+      {/* {open && ( */}
+      <div className={classNames(
+        'dropdown__menu',
+        { 'dropdown__menu--open': open },
       )}
+      >
+        {items.map(item => (
+          <button
+            key={item.id}
+            type="button"
+            className="dropdown__item"
+            value={item.value}
+            onClick={() => handleChange(item.value, item.name)}
+          >
+            {item.name}
+          </button>
+        ))}
+      </div>
+      {/* )} */}
     </div>
   );
 };

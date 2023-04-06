@@ -1,5 +1,6 @@
 import { useContext, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
+import classNames from 'classnames';
 import { CartContext, FavoritesContext } from '../../context';
 import { Logo } from '../Logo';
 import { NavList } from '../NavList';
@@ -110,13 +111,15 @@ export const Header: React.FC = () => {
         </div>
       </div>
 
-      {menuIsOpen && (
-        <div className="header__bottom">
-          <nav className="header__nav">
-            <NavList links={links} />
-          </nav>
-        </div>
+      <div className={classNames(
+        'header__bottom',
+        { 'header__bottom--open': menuIsOpen },
       )}
+      >
+        <nav className="header__nav">
+          <NavList links={links} />
+        </nav>
+      </div>
     </header>
   );
 };
