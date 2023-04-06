@@ -9,6 +9,10 @@
   position: absolute;
   bottom: 0;
 
+  @include onMobile {
+    justify-content: space-evenly;
+  }
+
   &__logo {
     margin-left: 152px;
 
