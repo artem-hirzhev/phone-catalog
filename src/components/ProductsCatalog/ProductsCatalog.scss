@@ -24,10 +24,6 @@
   &__filters {
     display: flex;
 
-    @include onMobile {
-      flex-direction: column;
-    }
-
     font-weight: 600;
     font-size: 12px;
     line-height: 15px;
@@ -41,10 +37,6 @@
 
   &__sort {
     margin-right: 16px;
-
-    @include onMobile {
-      margin-bottom: 8px;
-    }
   }
 
   &__cards {

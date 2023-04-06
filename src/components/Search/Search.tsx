@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import { useLocation, useSearchParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { desktopScreen } from '../../constants';
 import { ReactComponent as CrossIcon } from '../../assets/svg/close.svg';
 import { ReactComponent as SearchIcon } from '../../assets/svg/search.svg';
 import { useDebounce } from '../../hooks';
@@ -34,17 +33,14 @@ export const Search = () => {
   const { pathname } = useLocation();
   const category = pathname.split('/')[1];
 
-  const placeholderText = desktopScreen ? `Search in ${category}...` : 'Search...';
-  const searchSize = desktopScreen ? 27 : 11;
-
   return (
     <form className="search" onSubmit={e => e.preventDefault()}>
       <input
         type="text"
         className="search__field"
         value={query}
-        placeholder={placeholderText}
-        maxLength={searchSize}
+        spellCheck="false"
+        placeholder={`Search in ${category}...`}
         onChange={e => setQuery(e.target.value)}
       />
 

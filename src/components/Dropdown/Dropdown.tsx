@@ -45,7 +45,6 @@ export const Dropdown: React.FC<Props> = (
         )}
       </button>
 
-      {/* {open && ( */}
       <div className={classNames(
         'dropdown__menu',
         { 'dropdown__menu--open': open },
@@ -63,7 +62,6 @@ export const Dropdown: React.FC<Props> = (
           </button>
         ))}
       </div>
-      {/* )} */}
     </div>
   );
 };

@@ -10,7 +10,7 @@ The project follows the standard React folder structure where components, helper
 
 ### Components
 
-The components folder contains reusable components that are used throughout the project, like `ProductCard`, `ProductsList`, and `ProductsSlider`.
+The components folder contains reusable components that are used throughout the project, like `ProductCard`, `ProductsCatalog`, and `ProductsSlider`.
 
 ### Helpers
 
@@ -46,7 +46,7 @@ The `Home` page also contains a Shop by category section with links to phones, t
 Phones, Tablets, and Accessories Pages
 --------------------------------------
 
-The `Phones`, `Tablets`, and `Accessories` pages display a ProductsList component with all the products of the respective type.
+The `Phones`, `Tablets`, and `Accessories` pages display a ProductsCatalog component with all the products of the respective type.
 
 Users can sort the products by age, name, and price using a select element, and they can also choose how many items to display per page using another select element.
 

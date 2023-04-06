@@ -5,7 +5,6 @@
   position: relative;
 
   height: 64px;
-  width: 327px;
 
   @include onTablet {
     width: 200px;
@@ -19,27 +18,28 @@
 
   &__field {
     width: 326px;
+    text-overflow: ellipsis;
 
     @include onTablet {
       width: 199px;
     }
   
     @include onMobile {
-      width: 169px;
+      width: 140px;
     }
 
     height: 100%;
     border: none;
     outline: none;
 
-    padding-left: 24px;
+    padding: 0 40px 0 20px;
 
     font-family: inherit;
     font-weight: 600;
     font-size: 14px;
     line-height: 18px;
     color: $color-primary;
-    
+
     &:focus {
       background-color: #fafbfc;
     }
@@ -53,7 +53,7 @@
     border: none;
     background-color: transparent;
     position: absolute;
-    right: 24px;
+    right: 20px;
 
     &--active {
       cursor: pointer;

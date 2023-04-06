@@ -1,4 +1,3 @@
-import { mobileScreen } from '../../constants';
 import { ButtonSecondary } from '../ButtonSecondary';
 import { ReactComponent as ArrowLeft } from '../../assets/svg/arrowLeft.svg';
 import { ReactComponent as ArrowRight } from '../../assets/svg/arrowRight.svg';
@@ -48,7 +47,10 @@ export const Pagination: React.FC<Props> = (
     return result;
   };
 
-  // needed to make small pagination for mobile
+  // #region is needed to make small pagination on mobile
+  const { width } = window.screen;
+  const mobileScreen = width < 768;
+
   const getThreePages = (pages: number[], current: number): number[] => {
     const currentIndex = pages.findIndex(page => page === current);
     const start = currentIndex === 0 ? 0 : currentIndex - 1;
@@ -56,6 +58,7 @@ export const Pagination: React.FC<Props> = (
 
     return [...pages].slice(start, end);
   };
+  // #endregion
 
   const pagesCount = getPagesCount();
   const pagesNumbers = getPagesNumbers(1, pagesCount);

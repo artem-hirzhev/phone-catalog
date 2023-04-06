@@ -18,7 +18,7 @@ export const Footer = () => (
     </nav>
 
     <label className="footer__arrow">
-      <span>Back to top</span>
+      <span>BACK TO TOP</span>
 
       <ButtonSecondary
         handler={() => {

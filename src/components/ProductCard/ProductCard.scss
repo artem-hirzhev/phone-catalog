@@ -13,12 +13,6 @@
     padding: 12px 10px 0;
   }
 
-  @include onMobile {
-    height: 502px;
-    width: 272px;
-    padding: 32px 24px 0;
-  }
-
   border: 1px solid $color-elements;
 
   &__image {
