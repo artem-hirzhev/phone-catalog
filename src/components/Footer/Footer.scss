@@ -35,18 +35,23 @@
 
     @include onMobile {
       margin-right: 10px;
+      gap: 0;
     }
 
     &:hover {
       cursor: pointer;
     }
 
-    & :first-child {
+    &-text {
       font-weight: 600;
       font-size: 12px;
       line-height: 15px;
       text-align: right;
       color: $color-secondary;
+
+      @include onMobile {
+        display: none;
+      }
     }
   }
 }
