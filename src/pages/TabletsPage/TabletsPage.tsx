@@ -29,7 +29,7 @@ export const TabletsPage: React.FC = () => {
       {isLoading && <Loader />}
 
       {(!isLoading && !error && tablets.length > 0) && (
-        <ProductsCatalog products={tablets} title="Mobile phones" />
+        <ProductsCatalog products={tablets} title="Tablets" />
       )}
 
       {(!tablets.length && wasLoaded && !error) && (
